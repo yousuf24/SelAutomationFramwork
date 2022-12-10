@@ -1,0 +1,7 @@
+.classpath
+.project
+test-output
+target
+bin
+allure-results
+.settings
