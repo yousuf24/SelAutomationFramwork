@@ -1,0 +1,4 @@
+applicationurl="https://www.seleniumeasy.com"
+ChromeDriverPath=path
+ExcelTestDataFileName=testData.xlsx
+ExcelTestDataFilePath=

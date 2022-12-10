@@ -1,0 +1,9 @@
+package com.pages;
+
+import com.baseFramework.BaseClass;
+
+public class HomePage extends BaseClass{
+	public static void launchBrowser() {
+		driver.get(readProperty("applicationURL"));
+	}
+}

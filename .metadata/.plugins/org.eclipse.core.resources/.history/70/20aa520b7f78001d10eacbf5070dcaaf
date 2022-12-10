@@ -1,0 +1,14 @@
+package com.testScript;
+
+import org.testng.annotations.Test;
+
+public class TestScript0001 {
+	
+	
+	
+	@Test(enabled=true)
+	public void getprop() {
+		
+	}
+
+}

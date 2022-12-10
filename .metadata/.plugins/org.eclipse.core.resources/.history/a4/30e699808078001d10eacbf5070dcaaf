@@ -1,0 +1,44 @@
+package com.testScript;
+
+import java.lang.ProcessHandle.Info;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.baseFramework.BaseClass;
+
+public class TestScript0001 extends BaseClass{
+	
+	
+	
+	@Test(enabled=true)
+	public void readProp() {
+		logging.debug("DEBUG: in testcase->readProp");
+		System.out.println("Reading Property "+BaseClass.readProperty("applicationURL"));
+	}
+	@Test(enabled=true)
+	public void POMTest() {
+		logging.info("INFO: in testcase->POMTest");
+		//launchBrowser();
+		//homepg.clickSeleniumArticlesLink();
+	}
+	@BeforeTest
+	public void b4Test() {
+		logging.warn("WARN: Inside b4Test");
+	}
+	@BeforeMethod
+	public void b4Method() {
+		logging.warn("WARN: Inside b4Method");
+	}
+	
+	@AfterTest
+	public void afterTest() {
+		logging.warn("WARN: Inside b4Test");
+	}
+	@AfterMethod
+	public void afterMethod() {
+		logging.warn("WARN: Inside b4Method");
+	}
+
+}

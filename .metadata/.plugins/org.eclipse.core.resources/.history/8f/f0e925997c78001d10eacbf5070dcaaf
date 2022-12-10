@@ -1,0 +1,9 @@
+#Application Logger
+log4j.rootLogger=ALL,file1
+log4j.rootLogger.file1.File=C:\\Users\\HI\\My_Items\\Job\\Softwares\\eclipse-workspace3\\SeleniumAutomationFramework\\src\\com\\config\\ManualLogs.logs
+
+log4j.rootLogger.file1.MaxFileSize=900KB
+log4j.rootLogger.file1.MaxBackupIndex=10
+
+
+#Manual Logger

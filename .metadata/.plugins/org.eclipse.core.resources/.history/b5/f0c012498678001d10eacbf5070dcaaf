@@ -1,0 +1,6 @@
+applicationurl="https://www.seleniumeasy.com"
+ChromeDriverPath=path
+ExcelTestDataFileName=testData.xlsx
+ExcelTestDataFilePath=C:\\Users\\HI\\My_Items\\Job\\Softwares\\eclipse-workspace3\\SeleniumAutomationFramework\\resources\\testData.xlsx
+ExcelSheetName=Testcases
+log4jRelativeFilePath=\\src\\com\\config\\log4j.properties

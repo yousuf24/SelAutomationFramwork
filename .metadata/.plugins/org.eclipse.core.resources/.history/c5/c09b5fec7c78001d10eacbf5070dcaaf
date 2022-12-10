@@ -1,0 +1,10 @@
+#Application Logger
+log4j.rootLogger=ALL,file1
+log4j.rootLogger.file1.File=C:\\Users\\HI\\My_Items\\Job\\Softwares\\eclipse-workspace3\\SeleniumAutomationFramework\\src\\com\\config\\ManualLogs.logs
+log4j.rootLogger.file1.Appender=org.apache.log4j.RollingFileAppender
+log4j.rootLogger.file1.MaxFileSize=900KB
+log4j.rootLogger.file1.MaxBackupIndex=10
+log4j.rootLogger.file1.layout=org.apache.log4j.PatternLayout
+log4j.rootLogger.file1.layout.conversionPattern=%d{ABSOLUTE} %5p %c{strong}:%L:%m-%n 
+
+#Manual Logger

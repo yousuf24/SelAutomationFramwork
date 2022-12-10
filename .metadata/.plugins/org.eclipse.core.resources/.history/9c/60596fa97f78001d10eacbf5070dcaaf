@@ -1,0 +1,17 @@
+package com.testScript;
+
+import org.testng.annotations.Test;
+
+import com.baseFramework.BaseClass;
+
+public class TestScript0001 extends BaseClass{
+	
+	
+	
+	@Test(enabled=true)
+	public void readProp() {
+		logging.debug("debug in readProp testcase");
+		System.out.println("Reading Property "+BaseClass.readProperty("applicationURL"));
+	}
+
+}
