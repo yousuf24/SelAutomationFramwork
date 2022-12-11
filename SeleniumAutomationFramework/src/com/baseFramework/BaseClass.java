@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -41,17 +43,17 @@ public class BaseClass {//EveryClass in framework extends baseclass
 	public static String readProperty(String in) {
 		return prop.getProperty(in);
 	}
+	
 	public static void launchBrowser() {
-		System.setProperty("webdriver.chrome.driver", readProperty("ChromeDriverPath"));
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\HI\\My_Items\\Job\\Softwares\\eclipse-workspace3\\SeleniumAutomationFramework\\resources\\chromedriver.exe");
 		driver=new ChromeDriver();
-		//System.out.println(readProperty("applicationURL"));
-		driver.get(readProperty("applicationURL"));
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		}
+		String url=readProperty("applicationURL");
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		
 		driver.close();
 	}
 

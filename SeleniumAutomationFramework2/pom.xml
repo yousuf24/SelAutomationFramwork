@@ -1,21 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>SeleniumAutomationFramework</groupId>
-  <artifactId>SeleniumAutomationFramework</artifactId>
+  <groupId>SeleniumAutomationFramework2</groupId>
+  <artifactId>SeleniumAutomationFramework2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>SelAutomationFramework</name>
-  <description>FrameworkDesign in POM</description>
-  
   <build>
     <sourceDirectory>src</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -59,12 +48,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-        </dependencies>
-    </dependencyManagement>
-  
-  
-  <dependencies>
-   
+             
   <dependency> 
   	<groupId>io.cucumber</groupId>
   	<artifactId>cucumber-java</artifactId> 
@@ -273,9 +257,13 @@
     <artifactId>log4j</artifactId>
     <version>1.2.17</version>
 </dependency>
+            
+        </dependencies>
+    </dependencyManagement>
+  
+  
 
-    
-  </dependencies>
+
 
 
 </project>

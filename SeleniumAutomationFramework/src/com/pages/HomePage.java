@@ -5,7 +5,9 @@ import org.openqa.selenium.By;
 import com.baseFramework.BaseClass;
 
 public class HomePage extends BaseClass{
+	public static By ele=By.xpath(readProperty("Element"));
 	public void clickSeleniumArticlesLink() {
-		driver.findElement(By.xpath(readProperty("Element")));
+		driver.findElement(ele);
+		System.out.println(driver.getTitle());
 	}
 }

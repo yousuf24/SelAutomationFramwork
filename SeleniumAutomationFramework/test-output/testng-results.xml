@@ -1,103 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-10T18:56:27 IST" name="Suite" finished-at="2022-12-10T18:56:34 IST" duration-ms="6788">
+  <suite started-at="2022-12-11T10:47:57 IST" name="Default suite" finished-at="2022-12-11T10:47:57 IST" duration-ms="188">
     <groups>
     </groups>
-    <test started-at="2022-12-10T18:56:27 IST" name="Test" finished-at="2022-12-10T18:56:34 IST" duration-ms="6788">
-      <class name="com.testScript.TestScript0001">
-        <test-method is-config="true" signature="b4Suite()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:27 IST" name="b4Suite" finished-at="2022-12-10T18:56:27 IST" duration-ms="103" status="PASS">
+    <test started-at="2022-12-11T10:47:57 IST" name="Default test" finished-at="2022-12-11T10:47:57 IST" duration-ms="188">
+      <class name="com.testScript.TestScript0002">
+        <test-method is-config="true" signature="su()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="su" finished-at="2022-12-11T10:47:57 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- b4Suite -->
-        <test-method is-config="true" signature="b4Test()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:27 IST" name="b4Test" finished-at="2022-12-10T18:56:27 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- su -->
+        <test-method is-config="true" signature="su_test()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="su_test" finished-at="2022-12-11T10:47:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- b4Test -->
-        <test-method is-config="true" signature="b4Class()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:27 IST" name="b4Class" finished-at="2022-12-10T18:56:27 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- su_test -->
+        <test-method is-config="true" signature="su_class()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="su_class" finished-at="2022-12-11T10:47:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- b4Class -->
-        <test-method is-config="true" signature="b4Method()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:27 IST" name="b4Method" finished-at="2022-12-10T18:56:27 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- su_class -->
+        <test-method is-config="true" signature="bm()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="bm" finished-at="2022-12-11T10:47:57 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- b4Method -->
-        <test-method signature="readProp()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:28 IST" name="readProp" finished-at="2022-12-10T18:56:28 IST" duration-ms="113" status="PASS">
+        </test-method> <!-- bm -->
+        <test-method signature="readP()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="readP" finished-at="2022-12-11T10:47:57 IST" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readProp -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:28 IST" name="afterMethod" finished-at="2022-12-10T18:56:28 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- readP -->
+        <test-method is-config="true" signature="am()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="am" finished-at="2022-12-11T10:47:57 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="b4Method()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:28 IST" name="b4Method" finished-at="2022-12-10T18:56:28 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="td_class()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="td_class" finished-at="2022-12-11T10:47:57 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- b4Method -->
-        <test-method signature="POMTest()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:28 IST" name="POMTest" finished-at="2022-12-10T18:56:34 IST" duration-ms="6400" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Cannot find elements when the XPath is null.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:204)
-at org.openqa.selenium.By$ByXPath.<init>(By.java:287)
-at org.openqa.selenium.By.xpath(By.java:89)
-at com.pages.HomePage.clickSeleniumArticlesLink(HomePage.java:9)
-at com.testScript.TestScript0001.POMTest(TestScript0001.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- td_class -->
+        <test-method is-config="true" signature="td_test()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="td_test" finished-at="2022-12-11T10:47:57 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- POMTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:34 IST" name="afterMethod" finished-at="2022-12-10T18:56:34 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- td_test -->
+        <test-method is-config="true" signature="td()[pri:0, instance:com.testScript.TestScript0002@2796aeae]" started-at="2022-12-11T10:47:57 IST" name="td" finished-at="2022-12-11T10:47:57 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:34 IST" name="afterClass" finished-at="2022-12-10T18:56:34 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:34 IST" name="afterTest" finished-at="2022-12-10T18:56:34 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.testScript.TestScript0001@1e097d59]" started-at="2022-12-10T18:56:34 IST" name="afterSuite" finished-at="2022-12-10T18:56:34 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.testScript.TestScript0001 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- td -->
+      </class> <!-- com.testScript.TestScript0002 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

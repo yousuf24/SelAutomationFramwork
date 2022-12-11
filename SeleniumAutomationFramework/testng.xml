@@ -3,11 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.testScript.TestScript0001">
-      		<methods>
-      		<include name="readProp"/>
-      		<include name="POMTest"/>
-      </methods>
+      <class name="com.testScript.TestScript0002">
+      	<methods>
+      		<!-- <include name="readProp"/>
+      		<include name="POMTest"/> -->
+      		
+      		<include name="readP"/>
+      	</methods>
       </class>
     </classes>
   </test> <!-- Test -->

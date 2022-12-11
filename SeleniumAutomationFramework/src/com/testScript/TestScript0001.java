@@ -13,7 +13,7 @@ public class TestScript0001 extends BaseClass{
 	
 	@Test(enabled=true)
 	public void readProp() {
-		logging.debug("DEBUG: in testcase->readProp");
+		logging.info("INFO: in testcase->readProp");
 		System.out.println("Reading Property "+BaseClass.readProperty("applicationURL"));
 	}
 	@Test(enabled=true)
@@ -22,10 +22,7 @@ public class TestScript0001 extends BaseClass{
 		launchBrowser();
 		homepg.clickSeleniumArticlesLink();
 	}
-	@BeforeTest
-	public void b4Test() {
-		logging.warn("WARN: Inside b4Test");
-	}
+	
 	@BeforeMethod
 	public void b4Method() {
 		logging.warn("WARN: Inside b4Method");
@@ -34,21 +31,25 @@ public class TestScript0001 extends BaseClass{
 	public void b4Class() {
 		logging.info("INFO: inside BeforeClass");
 	}
+	@BeforeTest
+	public void b4Test() {
+		logging.warn("WARN: Inside b4Test");
+	}
 	@BeforeSuite
 	public void b4Suite() {
 		initializeProp(filePath);
 		PropertyConfigurator.configure(System.getProperty("user.dir")+prop.getProperty("log4jRelativeFilePath"));
-		
 		logging.info("INFO: inside BeforeSuite");
 	}
 	
-	@AfterTest
-	public void afterTest() {
-		logging.error("ERROR: Inside afterTest");
-	}
+	
 	@AfterMethod
 	public void afterMethod() {
 		logging.info("INFO: Inside afterMethod");
+	}
+	@AfterTest
+	public void afterTest() {
+		logging.error("ERROR: Inside afterTest");
 	}
 	@AfterClass
 	public void afterClass() {
