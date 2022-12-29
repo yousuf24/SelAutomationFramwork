@@ -17,9 +17,9 @@ public class TestScript0001 extends BaseClass {
 		
 		launchBrowser();
 		//hp.loadurl();
-		logging.info("BrowserLaunched.");
+		//logging.info("Browser About to be Launched.");
 		driver.close();
-		logging.info("BrowserClosed.");
+		//logging.info("BrowserClosed.");
 		
 	}
 

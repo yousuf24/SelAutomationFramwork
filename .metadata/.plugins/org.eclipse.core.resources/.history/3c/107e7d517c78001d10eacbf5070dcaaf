@@ -1,5 +1,0 @@
-#Application Logger
-log4j.rootLogger=ALL,file1
-
-
-#Manual Logger
