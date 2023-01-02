@@ -17,7 +17,7 @@ public class MyArray {
 		 * 
 		 */
 		
-		byte a=12; //8 bit data range is from -2^8 to 2^8-1 -> -256 to 255; 0000 0000 -> 1111 1111;-ve value will be analyzed by complementing bits and add 1 (2's complement) 
+		/*byte a=12; //8 bit data range is from -2^8 to 2^8-1 -> -256 to 255; 0000 0000 -> 1111 1111;-ve value will be analyzed by complementing bits and add 1 (2's complement) 
 		short b=20;// 16 bit  -2^16 to 2^16-1
 		int id=0; //32 bit
 		long d=20l; // 64 bit 
@@ -26,7 +26,7 @@ public class MyArray {
 		long b1=a;//we are trying to fit smaller database into Larger one
 		
 		long b2=234567777l;
-		int id2=(int)b2; // we need explicit typecasting
+		int id2=(int)b2; // we need explicit typecasting*/
 		
 		//array 
 		/*int[] id_arr= {1,2,3,4,5};//direct declaration using {}
@@ -40,7 +40,7 @@ public class MyArray {
 		
 		Integer[] id_arr3= {1,2,3,4,5};
 		Integer[] id_arr4=new Integer[5];// RHS size is mandatory
-		for(int i=0;i<5;i++)id_arr4[i]=i+1;*/
+		for(int i=0;i<5;i++)id_arr4[i]=i+1;
 		
 		//Functions of string
 		String A="Arshiya Syed";//not creating object; Stack is used; recommended to used
@@ -61,7 +61,36 @@ public class MyArray {
 		//.equals ()  compare only the content. Dont worry about reference
 		// ==  compare reference
 		System.out.println(result3+" "+result4);
-		System.out.println(result5+" "+result6);
+		System.out.println(result5+" "+result6);*/
+		
+		//%%%%%%%%%%%%%%%%%%%%%%%%%%%%Day9 Notes%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		// Au students ; name that follows only alphabets or space (no special char, no other \\w). 
+		//Id contains only digits and no decimal is allowed. 5 byte atleast
+		//email should A-Za-z0-9!@#$%^&**(()).com|.in|.org
+		String name="ABC";
+		String domainTerminator="com";
+		int id=345;
+		String email="arshiyaSyed2105@gmail.com";
+		//preRequisites
+		/*
+		A-Z
+		a-z
+		0-9
+		meta characters []().
+		. means any character digit/alphabet/specialchar/whitespace
+		whiteSpace \s \r\n \n \u2025 tabSpace \s+
+		quantifiers *?+ (repeating the string * 0 or more ? atomost 1 + atleast 1
+		\\b (zero width assertion)It separates a word to non-word
+		
+		*/
+		//boolean name_check=name.matches("[A-Z]*");
+		boolean domain_check=domainTerminator.matches("(com|in|org)");
+		
+		System.out.println(domain_check);
+		
+		
+		
+		
 
 	}
 
