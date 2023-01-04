@@ -1,5 +1,8 @@
 package com.au;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class MyArray {
 
 	public static void main(String[] args) {
@@ -77,18 +80,63 @@ public class MyArray {
 		a-z
 		0-9
 		meta characters []().
+		
 		. means any character digit/alphabet/specialchar/whitespace
 		whiteSpace \s \r\n \n \u2025 tabSpace \s+
 		quantifiers *?+ (repeating the string * 0 or more ? atomost 1 + atleast 1
 		\\b (zero width assertion)It separates a word to non-word
 		
-		*/
-		//boolean name_check=name.matches("[A-Z]*");
-		boolean domain_check=domainTerminator.matches("(com|in|org)");
 		
-		System.out.println(domain_check);
+		//boolean name_check=name.matches("[A-Z]*");//IUGUIAHGHEGHQOWIUGHQ
+		boolean domain_check=domainTerminator.matches("(com|in|org|gov)$");$ indicates end of the string; ^ indicates start of the string
 		
+		System.out.println(domain_check);*/
 		
+		String html_code="<div name=''>Text of your choice </div>"; // \(backSlash ) is the escape char
+		boolean res=html_code.matches("^<\\w+\\s\\w+=\\'\\'\\>[A-Za-z0-9_\\s]*\\<\\/\\w+\\>$");// [] () [A-Za-z0-9]
+		//System.out.println(res);
+				/*
+				 * <a id="abcd" />
+				 * or 
+				 * <a name="">Text of your choice </a>
+				 * [A-Za-z0-9_]   --> \\w      syed_arshiya   syed_arshiya. arshiya2002
+				 * [\r\n\n\s....] --> \\W (non words | all white space characters \r\n \n tab space)
+				 * [0-9] --> \\d used for only digits
+				 * <tagName .na;hgawodo > </tagName>  or <tagName .../>
+				 * \\' while writing regex u cant use directly few char to match the input string
+				 * \\. \\, @ \\( \\) \\[ \\]
+				 *     /  forward slash
+				 *     \  backward slash
+				 *     \\b (It separates word from non-Word)
+				 */
+//		String query="i read this book which is read by famous this reader";//count: 2
+//		String regex="\\b(\\w+)\\b.*\\1\\b";//expression that u have formed
+//		Pattern p=Pattern.compile(regex);// patterns are used for complex requirements
+//		Matcher m=p.matcher(query);int counter=0;
+//		while(m.find()) {
+//			System.out.println(m.group()+": "+m.group(1));
+//			counter++;
+//		}System.out.println("\r\nrepeated words COUNT: "+counter);
+		
+		String name_str="arshiya syed";//requirement is to print * instead of space
+		char[] arr=name_str.toCharArray();
+		for(int i=0;i<arr.length;i++){//Conventional method uses index i
+			if((arr[i]>='a' && arr[i]<='z') || (arr[i]>='A' && arr[i]<='Z') ) System.out.print(arr[i]+" ");
+			else System.out.print(" * ");
+			}
+		System.out.println();
+		for(char each:arr) { //enhanced for loop
+			if((each>='a' && each<='z') || (each>='A' && each<='Z') ) System.out.print(each+" ");
+			else System.out.print(" * ");
+		}
+		/*Logical operators
+		 * T AND F --> F   in java use &&
+		 * T  OR F --> T   use ||
+		 * 
+		 * 
+		 */
+		
+	
 		
 		
 
