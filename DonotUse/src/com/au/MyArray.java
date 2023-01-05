@@ -1,5 +1,6 @@
 package com.au;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -118,7 +119,7 @@ public class MyArray {
 //			counter++;
 //		}System.out.println("\r\nrepeated words COUNT: "+counter);
 		
-		String name_str="arshiya syed";//requirement is to print * instead of space
+		/*String name_str="arshiya syed";//requirement is to print * instead of space
 		char[] arr=name_str.toCharArray();
 		for(int i=0;i<arr.length;i++){//Conventional method uses index i
 			if((arr[i]>='a' && arr[i]<='z') || (arr[i]>='A' && arr[i]<='Z') ) System.out.print(arr[i]+" ");
@@ -136,9 +137,53 @@ public class MyArray {
 		 * 
 		 */
 		
+		String s = "I want to eat apple. apple is a fruit.\r\n I really want fruit.";
+		Pattern p=Pattern.compile("(\\b\\w+\\b)(?=[\\s\\S]*\\b\\1\\b)");
+		Matcher m=p.matcher(s);
+		while(m.find()) {
+			System.out.println(m.group());
+		}
 	
+	// (?<=\b| )([^ ]+)(?= |$).+(\1)  --> it detects first word that repeats
+			// (\\b\\w+\\b)(?=.*\\b\\1\\b)        // matches duplicates only in a single line
+			//(\\b\\w+\\b)(?=[\\s\\S]*\\b\\1\\b)  // or the above regex with DOTALL flag
+			/*
+			      Pattern p = Pattern.compile("\\b(\\w+)\\b(?=.*\\b(\\1)\\b)", Pattern.DOTALL);
+
+	    			
+	    		Matcher m = p.matcher(s);
+	    		while (m.find()) {
+	        		System.out.println("at: " + m.start(1) + " " + m.group(1));
+	        		System.out.println("    " + m.start(2) + " " + m.group(2));
+		*/
+//	String test02="arshiya syed ji"; // \\b separates word to non word. ZeroWidthassertion. Word Boundary
+//	Pattern p=Pattern.compile("(?<=\\b|\\s)([a-zA-Z])");// can match any substring from inputString
+//	Matcher m=p.matcher(test02);int counter=0;
+//	while(m.find()) {
+//		System.out.println(m.group(1));counter++;
+//	}System.out.println(counter);
 		
 		
+		/*\\s -> space
+		\\S --> [^\\s]
+		\\w --> word
+		\\W -->[^\\w]
+		\\d --> digits
+		\\D --> [^0-9]*/
+	
+//	String test03="benedit cumberbatch";
+//	boolean flag3=test03.matches("[^\\s]+"); // ^ excludes the expression
+//	System.out.println(flag3);
+	
+//	String test04="henry cavil";
+//	System.out.println(test04.matches(".*(?=\\s|$).*"));
+//	System.out.println(test04.matches(".+"));
+		
+//	String test05="a\r\nd";
+//	Pattern p3=Pattern.compile(".*"); 
+//	Matcher m3=p3.matcher(test05);
+//	while(m3.find()) {System.out.println(m3.group());}
+	
 
 	}
 
