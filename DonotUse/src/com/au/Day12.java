@@ -1,6 +1,21 @@
 package com.au;
 
 import java.util.Random;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+import java.util.*;
+
+
+
+abstract class Abs{ //ABstract class can have both abstract/non abstract methods
+	
+}
+
+class Abs2{
+	
+	void method1() {
+	}
+}
 
 public class Day12 {
 	public static String evaluate(boolean condition) {
@@ -9,7 +24,7 @@ public class Day12 {
 	}
 
 	public static void main(String[] args) {
-		
+		IntStream s=IntStream.of(1,2,3);
 		
 		
 		
