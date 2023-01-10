@@ -5152,3 +5152,4 @@ org.eclipse.core.runtime.CoreException: Could not read maven project
 2023-01-10 15:53:40,877 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-01-10 15:53:40,880 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\HI\My_Items\Job\Softwares\eclipse-workspace3\DonotUse\src\main\resources
 2023-01-10 15:53:40,882 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-10 15:53:40,885 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\HI\My_Items\Job\Softwares\eclipse-workspace3\DonotUse\src\test\resources
