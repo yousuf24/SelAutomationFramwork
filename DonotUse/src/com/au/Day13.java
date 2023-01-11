@@ -92,7 +92,7 @@ public class Day13 {
 //		System.out.println("Input taken from User: "+input);
 //		sc.close();
 		
-//		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+//		BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); //from the console
 //		BufferedWriter bw=new BufferedWriter(new FileWriter("test.txt"));
 //		System.out.println("Pls enter yourName?");// convey to user
 //		String in=br.readLine();

@@ -32,8 +32,12 @@ public class Day15 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		Monkey obj2 = null; // "" is not same as null and void is not same as null
-		System.out.println(obj2);
+		String name="";
+		
+		
+		
+//		Monkey obj2 = null; // "" is not same as null and void is not same as null
+//		System.out.println(obj2);
 		
 		
 //		Day15 obj1=new Day15();
