@@ -6,10 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
@@ -20,12 +22,68 @@ class SpiderMonkey{
 	}
 }
 public class Day16 {
-
-	public static void main(String[] args) throws FileNotFoundException {	
-		int[] array1= {99,98,97};
-		for(int each:array1) {
-			System.out.println(each);
+	
+	
+	public static int fact(int num) {// they are not recommended method. DSA DFS. Stackoverflow
+		int fact=1;//for 'sum' use temp variable with value 0
+		
+		if(num<=1)return 1;//base condition
+		else return num * fact(num-1);//iterative condition
+	}
+	
+	/*
+	 * num * fact(num-1)
+	 * num * (num-1) * fact(num-2)
+	 * ..
+	 * ...
+	 * num*num-1*num-2...................................*1
+	 */
+	
+	
+	public static void stat() {
+		
+	}
+	public static void makePattern(int n) {
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print("*");
+			}System.out.println();
+			
 		}
+		for(int i=1;i<=n;i++) {
+			for(int j=n-i;j>=1;j--) {
+				
+				System.out.print("*");
+			}System.out.println();
+		}
+	}
+
+	public static void main(String[] args) throws FileNotFoundException {
+		System.out.println(fact(5));
+		
+		Day16.stat();
+		Day16 obj90=new Day16();
+		obj90.stat();
+		
+		
+		//makePattern(5);
+		
+		//Object[]
+//		SpiderMonkey object1=new SpiderMonkey();
+//		SpiderMonkey object2=new SpiderMonkey();
+//		SpiderMonkey object3=new SpiderMonkey();// Business give us array of Objects
+//		Object[] monkeyArray= {object1,object2,object3};//Object array
+		
+		
+		
+		
+//		String name="Syed Arshiya Althaf";//.split( ) will return [Syed,Arshiya,Althaf]
+//		int len=name.split(" ").length;//Function chaining
+		
+//		int[] array1= {99,98,97};
+//		for(int each:array1) {
+//			System.out.println(each);
+//		}
 		
 		
 		
@@ -57,7 +115,7 @@ public class Day16 {
 //			stack.pop();
 //		}
 			
-		System.out.println();
+		//System.out.println();
 		//while(!stack.isEmpty()) {System.out.println( stack.pop());}
 //		System.out.println(stack.peek());
 //		System.out.println(stack.isEmpty());
@@ -93,3 +151,4 @@ public class Day16 {
 	}
 
 }
+ 
