@@ -22,6 +22,19 @@ class SpiderMonkey{
 	}
 }
 public class Day16 {
+	enum Seasons{// Enums can be declared outside the class, inside class but not with in methods
+		
+		SPRING(100),WINTER(30),SUMMER(90),RAINY(50);
+		private int points;
+		private Seasons(int i){
+			this.points=i;
+		}
+		
+		public Seasons getObj() {
+			return this;
+		}
+		
+	}
 	
 	
 	public static int fact(int num) {// they are not recommended method. DSA DFS. Stackoverflow
@@ -59,11 +72,19 @@ public class Day16 {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(fact(5));
 		
-		Day16.stat();
-		Day16 obj90=new Day16();
-		obj90.stat();
+		//System.out.println(Seasons.RAINY);//this is how we access enum
+		//Seasons.valueOf(Seasons.RAINY);
+		Seasons[] arr0=Seasons.values();
+		for(Seasons each:arr0) {
+			System.out.println(each.name()+":"+each.points);
+		}
+		
+		//System.out.println(fact(5));
+		
+//		Day16.stat();
+//		Day16 obj90=new Day16();
+//		obj90.stat();
 		
 		
 		//makePattern(5);
