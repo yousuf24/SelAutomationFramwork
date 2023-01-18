@@ -75,11 +75,11 @@ public class Day16 {
 		
 		//System.out.println(Seasons.RAINY);//this is how we access enum
 		//Seasons.valueOf(Seasons.RAINY);
-		Seasons[] arr0=Seasons.values();
-		for(Seasons each:arr0) {
-			System.out.println(each.name()+":"+each.points);
-		}
-		
+//		Seasons[] arr0=Seasons.values();
+//		for(Seasons each:arr0) {
+//			System.out.println(each.name()+":"+each.points);
+//		}
+//		
 		//System.out.println(fact(5));
 		
 //		Day16.stat();
