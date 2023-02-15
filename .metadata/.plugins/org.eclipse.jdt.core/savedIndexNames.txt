@@ -108,7 +108,6 @@ INDEX VERSION 1.131+C:\Users\HI\My_Items\Job\Softwares\eclipse-workspace3\.metad
 1142446282.index
 1873582094.index
 3480946510.index
-1010482195.index
 1043375949.index
 2225948275.index
 4195408105.index
