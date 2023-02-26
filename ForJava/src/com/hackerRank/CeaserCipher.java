@@ -1,8 +1,12 @@
 package com.hackerRank;
 
 public class CeaserCipher {
+	static void addNumtoChar(char c,int n) {
+		System.out.println((char)(c+n));
+	}
 
 	public static void main(String[] args) {
+		addNumtoChar('d', 5);
 		String s="Z"
 				+ "";
 		 char[] arr=s.toCharArray();int len=s.length(),k=3;
@@ -18,7 +22,7 @@ public class CeaserCipher {
 		    		arr[i]=(char)((arr[i]-'A' + k+26)%26 +'A');
 		    	}
 		    }
-		    System.out.println(new String(arr));
+		    //System.out.println(new String(arr));
 
 	}
 

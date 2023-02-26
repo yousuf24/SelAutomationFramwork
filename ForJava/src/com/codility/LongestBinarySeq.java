@@ -1,7 +1,7 @@
 package com.codility;
 
 public class LongestBinarySeq {
-	static int maxZeros(int N)
+	       static int maxZeros(int N)
     {
         int maxm = -1;
         
@@ -24,7 +24,7 @@ public class LongestBinarySeq {
         return maxm;
     }
 	public static int solution(int N) {
-		String bs=Integer.toBinaryString(N);
+		String bs=Integer.toBinaryString(N);//0001000010000100000000001
 		System.out.println(bs);
 		int len=bs.length(),gmax=0;
 		int i=0;
@@ -48,8 +48,8 @@ public class LongestBinarySeq {
 	}
 	public static void main(String[] args) {
 		
-		System.out.println(solution(104198));//10000010001 = 1041
-		System.out.println(maxZeros(104197));
+		//System.out.println(solution(1098765));//100000100001 = 1041 -->0
+		System.out.println(maxZeros(104197));// 10000000 -->6
 
 	}
 
