@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class Ude extends Exception{
 	Ude(){
@@ -27,7 +29,8 @@ public class Day28 {
 	public static void main(String[] args)  {
 		//Scanner and exception , File , Read the file using Scanner, print the same on the console
 		//try catch and finally , how can we declare multiple Exceptions with single reference, user-defined excep
-		//List.of difference with Arrays.asList, lambda expression, streams, terminal ops in streams, chaining in stream
+		//List.of difference with Arrays.asList, lambda expression, 
+		//streams, terminal ops in streams, chaining in stream
 		//declaring an int[] and converting in to stream and printing. Foreach
 	
 		Collection<String> list1=List.of("spring","fall","winter","summer");//Immutable collection
@@ -43,18 +46,40 @@ public class Day28 {
 		
 		
 		//Lamda are for consized way of writing the code
-		Supplier<Employee> obj=new Supplier<Employee>() {
-			@Override
-			public Employee get() {				
-				return new Employee();
-			}			
-		};
-		
-		Supplier<Employee> lam=()->new Employee();//Functional interfaces
-		
-		
+//		Supplier<Employee> obj=new Supplier<Employee>() {
+//			@Override
+//			public Employee get() {				
+//				return new Employee();
+//			}			
+//		};
+//		
+//		Supplier<Employee> lam=()->new Employee();//Functional interfaces
 		
 		
+		//Stream
+		Stream<Integer> st=Stream.of(1,2,3,56,89);
+		List<Integer> li=st.collect(Collectors.toList());
+		
+		String[] names= {"mohammad","sriniRajis","shaikShoaib","cholamurugesan"};
+		
+		//terminal operations
+//		long countOf=Arrays
+//		.stream(names)
+//		.filter(x->x.length()>=6).count();
+//		
+//		System.out.println(countOf);
+		
+		String str="2 4 6 8";
+		String[] arr=str.split("\\s");// 2 4 6 8
+		
+		Stream<String> strea=Arrays.stream(arr);
+		int sum=strea.filter(x->x.length()==1).mapToInt(x->Integer.parseInt(x)).sum();
+		System.out.println(sum);
+		
+		List<Double> li2=new ArrayList<>(Arrays.asList(2.3,3.4,4.5,55.6,6000.0,54700.00));
+		li2.forEach(x->System.out.print(x+ " "));
+		System.out.println();
+		li2.forEach(System.out::println);
 		
 		
 		

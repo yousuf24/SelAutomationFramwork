@@ -8,24 +8,31 @@ public class PalindromeIndex {
         	right--;
         }return true;
     }
-	public static int findI(String s) {
-		
+	public static int findI(String s) {		
 		int left=0,right=s.length()-1;
 		if(isP(s,left,right))return -1;
 		
-		while(left <=right) {
-			if(s.charAt(left)!=s.charAt(right)) {
-			 
-			 if(isP(s,left,right-1)) {return right;}
-			 else {if(isP(s,left+1,right))return left;}
-		 }left++;right--;
-		
+		while (left <= right) {
+			if (s.charAt(left) != s.charAt(right)) {
+
+				if (isP(s, left+1, right )) {
+					return left;
+				} else {
+					if (isP(s, left , right-1))
+						return right;
+				}
+			}
+			left++;
+			right--;
+
 		}return -1;
 		
 	}
 
 	public static void main(String[] args) {
-		System.out.println(findI("aaab"));
+		System.out.println(findI("axaa"));
+		
+		
 		
 		/*
 		int toR=0;
