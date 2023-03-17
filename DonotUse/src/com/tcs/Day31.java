@@ -2,6 +2,7 @@ package com.tcs;
 
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.Queue;
 
 class Node{
 	int data;
@@ -12,6 +13,29 @@ class Node{
 }
 public class Day31 {//custom linkedList
 	Node head;
+	
+	public void display() {
+		Node pointer=head;
+		while(pointer!=null) {
+			System.out.print(pointer.data+"->");
+			pointer=pointer.next;//i++;
+		}		
+		
+	}
+	public void deleteBackHalf() {
+		Node fast=head;
+		Node slow=head;
+		Node prev=null;
+		
+		while(fast!=null && fast.next!=null) {
+			
+			
+			fast=fast.next.next;//i=i+2;
+			prev=slow;
+			slow=slow.next;//i++
+		}prev.next=null;;
+		
+	}
 	public void deleteFromEnd(int k) {
 		Node p1=head;
 		Node p2=head;
@@ -50,15 +74,16 @@ public class Day31 {//custom linkedList
 		three.next=four;
 		four.next=five;
 		
+		customLinkedList.display();
+		customLinkedList.deleteBackHalf();
+		System.out.println();
+		customLinkedList.display();
 		
 		//How to iterate through the linkedList
-		Node pointer=customLinkedList.head;
-		while(pointer!=null) {
-			System.out.print(pointer.data+"->");
-			pointer=pointer.next;//i++;
-		}		
 		
 		LinkedList<Integer> ll=new LinkedList<>();
+		Queue<Integer> Qu=new LinkedList<>();
+		//FIFO .add .offer .remove .poll
 		
 		
 		
