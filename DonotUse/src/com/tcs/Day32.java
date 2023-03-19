@@ -27,30 +27,36 @@ public class Day32 implements Comparator<Integer> {
 		List<Integer> li=Arrays.asList(arr);//List.of(1,2,3,4,56,7,87,8,0);
 		//System.out.println(li);
 		//Comparator<Day32> comp=Comparator.comparing();
-		//int result=Collections.binarySearch(li, 0, <>);
+		//int result=Collections.binarySearch(li, 0, Comparator.comparing(null));
 		//System.out.println(result);
 		li.sort((a,b)->a-b);
 //		System.out.println(li);
 //		li.sort((a,b)->b-a);		
-//		System.out.println(li);
-		
-		
+//		System.out.println(li);	
 		
 		//TODO Reverse an array without creating a new array ( pivot around mid point and use i, len-1-i equality
-		int[] arr1=new int[] {1,2,3,4,5};int len=arr1.length;
+		int[] arr1=new int[] {1,2,3,4,5,6};int len=arr1.length;
 		for(int i=0;i<len/2;i++) {//arr[i]=arr[len-1-i] ; //reversed array
 			int temp=arr1[i];			
 			arr1[i]=arr1[len-i-1];
 			arr1[len-i-1]=temp;
 		}
-		System.out.println(Arrays.toString(arr1));
-		
-		
+		//System.out.println(Arrays.toString(arr1));
 		
 		//TODO takes two array and returns an array with even Number
+		int[] A1= {2,4,6,7},B1= {0,1,2,8,9,10};
+		
+		Object[] resultArray=Stream.of(A1,B1)
+		.flatMapToInt(x->Arrays.stream(x))
+		.boxed()
+		.filter(x->x%2==0 && x!=0)
+		.map(x->x.intValue())
+		.toArray();
+		System.out.println(Arrays.toString(resultArray));
+		
 		//Convert list into an array using stream
 		List<Integer> list01=new ArrayList<>(List.of(1,2,3));
-		list01.stream().mapToInt(Integer::intValue).toArray();
+		list01.stream().mapToInt(x->x.intValue()).toArray();
 		//TODO stream of int[] , use flatpMapToint and filterToarray
 		//TODO Recommended way when u do string reverse operation/ or any operation on object is to check if object is null to avoid null pointer exception
 		//TODO normalize a string (lowercase, trim(), replace(<whiteSpace>))
