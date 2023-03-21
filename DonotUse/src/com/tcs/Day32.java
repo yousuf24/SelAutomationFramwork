@@ -46,20 +46,40 @@ public class Day32 implements Comparator<Integer> {
 		//TODO takes two array and returns an array with even Number
 		int[] A1= {2,4,6,7},B1= {0,1,2,8,9,10};
 		
-		Object[] resultArray=Stream.of(A1,B1)
-		.flatMapToInt(x->Arrays.stream(x))
-		.boxed()
+		
+		Object[] resultArray=Stream.of(A1,B1)//Stream<int[]>
+		.flatMapToInt(x->Arrays.stream(x))//IntStream
+		.boxed()//Stream[Integer]
 		.filter(x->x%2==0 && x!=0)
-		.map(x->x.intValue())
 		.toArray();
-		System.out.println(Arrays.toString(resultArray));
+		
+		int[] resultArray1=Stream.of(A1,B1)//Stream<int[]>
+				.flatMapToInt(x->Arrays.stream(x))//IntStream
+				.filter(x->x%2==0 && x!=0)
+				.toArray();
+		//System.out.println(Arrays.toString(resultArray));
 		
 		//Convert list into an array using stream
-		List<Integer> list01=new ArrayList<>(List.of(1,2,3));
-		list01.stream().mapToInt(x->x.intValue()).toArray();
+		List<Double> listD=new ArrayList<>(List.of(1.0,2.3,4.1));
+		Double[] listDToArr=listD.toArray(new Double[] {});
+		System.out.println(Arrays.toString(listDToArr));
+		
+		Float[] arrF=new Float[] {1.0f,2.3f,3.4f};
+		List<Float> arrFToList=Arrays.asList(arrF);	
+		System.out.println(arrFToList);
+		
+		List<Integer> list01=new ArrayList<>(List.of(1,2,3));//immutable list
+		int[] arrFromList=list01.stream().mapToInt(x->x.intValue()).toArray();
+		
 		//TODO stream of int[] , use flatpMapToint and filterToarray
 		//TODO Recommended way when u do string reverse operation/ or any operation on object is to check if object is null to avoid null pointer exception
+//		String country = null;//"canada";
+//		if(country.isEmpty() && country!=null)//
+//			System.out.println(country.length());
 		//TODO normalize a string (lowercase, trim(), replace(<whiteSpace>))
+		String sentence="     Background       ";
+		sentence=sentence.trim();//.replaceAll("\\W", "");
+		System.out.println("*"+sentence+"*");
 		//TODO pwdFair, .chars().anyMatch ; isAllUpper  .chars().allMatch()
 		//TODO use stream concept and  .findFirst()
 		//TODO find commonElements given two arrays
