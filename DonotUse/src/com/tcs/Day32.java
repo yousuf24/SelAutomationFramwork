@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -80,23 +81,49 @@ public class Day32 implements Comparator<Integer> {
 		String sentence="     Background       ";
 		sentence=sentence.trim();//.replaceAll("\\W", "");
 		System.out.println("*"+sentence+"*");
-		//TODO pwdFair, .chars().anyMatch ; isAllUpper  .chars().allMatch()
-		//TODO use stream concept and  .findFirst()
-		//TODO find commonElements given two arrays
-		//TODO merge two arrays without defining/decaring new array
+		//TODO pwdFair, .chars().anyMatch ; isAllUpper .allMatch()
+		String name="Scarlett johnson";//output of .chars() -->Stream<s c a r l e t t.....>
+		boolean ifPExist=name.chars().anyMatch(x->x=='j');
+		System.out.println(ifPExist);
+		
 		int[] A= {10,1,18,7},B= {10,90,99,21,18,7};
-		Set<Integer> uniq=new HashSet<>();
-		
-		Set<Integer> dups=Stream.of(A,B)
-		.flatMapToInt(Arrays::stream)
+		//TODO use stream concept and  .findFirst() based on condition if it is even
+		Optional<Integer> opI=Stream.of(A,B)
+		.flatMapToInt(Arrays::stream) //single stream ( IntStream)
 		.boxed()
-		.filter(x->!uniq.add(x)).collect(Collectors.toSet());
+		.filter(x->x%2==0 && x!=0)
+		.findFirst();
+		
+		//opI.ifPresent(System.out::print);//it will print on the console if integer exist;
+		
+		
+		//TODO merge two arrays without defining/declaring new array
+		
+		//.boxed() any primitive to non primitive
+		int[] arr000=
+		Stream.of(A,B)
+		.flatMapToInt(Arrays::stream) //single stream ( IntStream)
+		.toArray();
+		
+		Object[] arr001=
+		Stream.of(A,B)
+		.flatMapToInt(Arrays::stream) //single stream ( IntStream)
+		.boxed()//streamof integers
+		.toArray();		
+		
+		//If u have two arrays and u want to find the common elements between the two arrays
+		//TODO find commonElements given two arrays
+		Set<Integer> uniq=new HashSet<>();//collecting only unique elements
+		uniq.add(1);//true
+		uniq.add(1);//false
+		
+		Set<Integer> dups=
+		 Stream.of(A,B) //converting two int[] into stream(int[])
+		.flatMapToInt(Arrays::stream)//it will convert into single stream intStream
+		.boxed()//Stream<Integer>10,1,18,7,10,90,99,21,18,7
+		.filter(x->!uniq.add(x))// 18,7,10
+		.collect(Collectors.toSet());
 		//System.out.println(dups);
-		
-		
-		
-		
-		
 		//Source: Mar23_11.java 
 		
 
