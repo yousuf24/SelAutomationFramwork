@@ -27,16 +27,19 @@ public class Day32 implements Comparator<Integer> {
 		Integer[] arr= {1,2,3,4,5,6,7,88,0};
 		List<Integer> li=Arrays.asList(arr);//List.of(1,2,3,4,56,7,87,8,0);
 		//System.out.println(li);
+		//String outputAsStr=Arrays.toString(arr);
+		
 		//Comparator<Day32> comp=Comparator.comparing();
-		//int result=Collections.binarySearch(li, 0, Comparator.comparing(null));
+		int result=Collections.binarySearch(li, 0, Comparator.comparing(null));
 		//System.out.println(result);
-		li.sort((a,b)->a-b);
+		
+		li.sort((a,b)->a-b);//lambda expression for Comparator
 //		System.out.println(li);
 //		li.sort((a,b)->b-a);		
 //		System.out.println(li);	
 		
 		//TODO Reverse an array without creating a new array ( pivot around mid point and use i, len-1-i equality
-		int[] arr1=new int[] {1,2,3,4,5,6};int len=arr1.length;
+		int[] arr1=new int[] {1,2,3,4,5,6,7};int len=arr1.length;
 		for(int i=0;i<len/2;i++) {//arr[i]=arr[len-1-i] ; //reversed array
 			int temp=arr1[i];			
 			arr1[i]=arr1[len-i-1];
@@ -45,8 +48,7 @@ public class Day32 implements Comparator<Integer> {
 		//System.out.println(Arrays.toString(arr1));
 		
 		//TODO takes two array and returns an array with even Number
-		int[] A1= {2,4,6,7},B1= {0,1,2,8,9,10};
-		
+		int[] A1= {2,4,6,7},B1= {0,1,2,8,9,10};		
 		
 		Object[] resultArray=Stream.of(A1,B1)//Stream<int[]>
 		.flatMapToInt(x->Arrays.stream(x))//IntStream
@@ -71,6 +73,12 @@ public class Day32 implements Comparator<Integer> {
 		
 		List<Integer> list01=new ArrayList<>(List.of(1,2,3));//immutable list
 		int[] arrFromList=list01.stream().mapToInt(x->x.intValue()).toArray();
+		
+		int ash1=99;
+		Integer ash1ToW=Integer.valueOf(ash1);
+		
+		Integer ash2=90;
+		int ash2ToP=ash2.intValue();
 		
 		//TODO stream of int[] , use flatpMapToint and filterToarray
 		//TODO Recommended way when u do string reverse operation/ or any operation on object is to check if object is null to avoid null pointer exception
