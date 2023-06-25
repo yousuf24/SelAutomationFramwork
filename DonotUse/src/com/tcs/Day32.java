@@ -30,7 +30,7 @@ public class Day32 implements Comparator<Integer> {
 		//String outputAsStr=Arrays.toString(arr);
 		
 		//Comparator<Day32> comp=Comparator.comparing();
-		int result=Collections.binarySearch(li, 0, Comparator.comparing(null));
+		//int result=Collections.binarySearch(li, 0, Comparator.comparing(null));
 		//System.out.println(result);
 		
 		li.sort((a,b)->a-b);//lambda expression for Comparator
@@ -88,21 +88,28 @@ public class Day32 implements Comparator<Integer> {
 		//TODO normalize a string (lowercase, trim(), replace(<whiteSpace>))
 		String sentence="     Background       ";
 		sentence=sentence.trim();//.replaceAll("\\W", "");
+//		\\d - digit
+//		\\D - [^digit]
+//		\\s - space
+//		\\w - word
+//		\\W - [^word]
 		System.out.println("*"+sentence+"*");
 		//TODO pwdFair, .chars().anyMatch ; isAllUpper .allMatch()
 		String name="Scarlett johnson";//output of .chars() -->Stream<s c a r l e t t.....>
+		//System.out.println(Arrays.toString( name.chars().toArray()));
+		
 		boolean ifPExist=name.chars().anyMatch(x->x=='j');
 		System.out.println(ifPExist);
 		
 		int[] A= {10,1,18,7},B= {10,90,99,21,18,7};
 		//TODO use stream concept and  .findFirst() based on condition if it is even
-		Optional<Integer> opI=Stream.of(A,B)
+		Optional<Integer> opI=Stream.of(A,B)   //stream<int[]>
 		.flatMapToInt(Arrays::stream) //single stream ( IntStream)
-		.boxed()
-		.filter(x->x%2==0 && x!=0)
-		.findFirst();
+		.boxed() //stream<Integer>
+		.filter(x->x%2==0 && x!=0) //Stream<Integer> but it doesn't contain all elements 
+		.findFirst();//get the first element
 		
-		//opI.ifPresent(System.out::print);//it will print on the console if integer exist;
+		opI.ifPresent(System.out::print);//it will print on the console if integer exist;
 		
 		
 		//TODO merge two arrays without defining/declaring new array

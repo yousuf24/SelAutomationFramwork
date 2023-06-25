@@ -22,8 +22,8 @@ public class Day29 {
 		//3. Comparator  and Collections.binarySearch(,,); Guest and Room*
 		//4. Handson example
 //		System.out.println();
-//		System.out.format("%-20s %-10s %-8s%-5d%n", "raji","S","Polur",120);//firstarg is string, ..args
-//		System.out.format("%-20s %-10s %-8s%-5d", "arshiya","P","Vizag",100);
+		System.out.format("%-20s %-10s %-8s%-5d%n", "raji","S","Polur",120);//firstarg is string, ..args
+		System.out.format("%-20s %-10s %-8s%-5d", "arshiya","P","Vizag",100);
 		
 		Day29 object0=new Day29(1,"Joe",20);		
 		System.out.println(object0);

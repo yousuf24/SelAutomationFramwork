@@ -11,8 +11,16 @@ import java.util.Queue;
 //Temp
 class customC {
 	String at1;
-	public String toString() {
-		return this.at1;
+	
+	
+	public String toString() { //toString() Equals()
+		customC obj1=new customC();
+		obj1.toString();
+		System.out.println(obj1.at1 ); //null
+		
+		return this.at1;	
+		
+		
 	}
 }
 
@@ -76,8 +84,8 @@ public class Day31 {//custom linkedList
 		
 		Comparator<Integer> com=(a,b)->a-b;//logic to sort the ascending
 		Comparator<Node> com2=(a,b)->a.data-b.data;
-		Comparator<String> com3=(x,y)->x.compareTo(y);
-		Comparator<customC> com4=(x,y)->y.at1.compareTo(x.at1);
+		Comparator<String> com3=(x,y)->x.compareTo(y);//ascending order x-y
+		Comparator<customC> com4=(x,y)->y.at1.compareTo(x.at1);//descending order y-x
 		
 		customC obj1=new customC();obj1.at1="raji";
 		customC obj2=new customC();obj2.at1="vishnu";
@@ -87,10 +95,12 @@ public class Day31 {//custom linkedList
 		Collections.sort(list0, com4);
 		System.out.println(list0);
 		
-		List<Integer> li=new ArrayList<>();li.add(2);li.add(3);li.add(0);li.add(90);
+		List<Integer> li=new ArrayList<>();li.add(2);li.add(3);li.add(0);li.add(90);//new Arraylist<>(){2,3,0,90}
+		//List.of(2,3,0,90);
 		List<String> li1=new ArrayList<>();li1.add("afiagh");li1.add("zoey");
 		//System.out.println(li);System.out.println(li1);
 		Collections.sort(li, com);
+		Collections.sort(li);//Ascending
 		//Collections.sort(li1, com);
 		//System.out.println(li1);
 		//System.out.println(li1);//asc
